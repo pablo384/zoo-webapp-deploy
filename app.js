@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParse= require('body-parser');
 const path = require('path')
 const app=express();
-
+const rendertron = require('rendertron-middleware');
 
 //cargar rutas
 const user_routes = require('./routes/user');
@@ -12,6 +12,12 @@ const animal_routes = require('./routes/animal');
 
 
 //middleware de body-parser
+//render
+app.use(rendertron.makeMiddleware({
+  proxyUrl: 'http://104.236.237.133:8080/render',
+}));
+
+
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(bodyParse.json());
 
