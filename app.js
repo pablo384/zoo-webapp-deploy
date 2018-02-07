@@ -17,7 +17,7 @@ app.set('trust proxy', 'loopback');
 //middleware de body-parser
 //render
 app.use(rendertron.makeMiddleware({
-  proxyUrl: 'https://render-tron.appspot.com/render',
+  proxyUrl: 'http://localhost:8080/render',
 }));
 
 
