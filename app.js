@@ -10,8 +10,8 @@ const user_routes = require('./routes/user');
 const animal_routes = require('./routes/animal');
 
 // Read the link below about express behind a proxy
-app.set('trust proxy', true);
-app.set('trust proxy', 'loopback');
+// app.set('trust proxy', true);
+// app.set('trust proxy', 'loopback');
 
 
 //middleware de body-parser
