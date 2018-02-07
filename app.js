@@ -14,7 +14,7 @@ const animal_routes = require('./routes/animal');
 //middleware de body-parser
 //render
 app.use(rendertron.makeMiddleware({
-  proxyUrl: 'http://104.236.237.133:8080/render',
+  proxyUrl: 'http://prueba384:8080/render',
 }));
 
 
