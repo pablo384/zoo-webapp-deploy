@@ -5,6 +5,7 @@ const app = require('./app');
 const port = process.env.PORT || 3789;
 var http = require('http');
 var https = require('https');
+var fs = require('fs');
 
 var ssl = {
     key: fs.readFileSync('/etc/letsencrypt/live/pablo384.com-0001/privkey.pem'),
