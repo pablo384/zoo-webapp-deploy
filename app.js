@@ -41,6 +41,10 @@ app.get('*',function(req, res, next){
     res.sendFile(path.resolve('client/index.html'));
 });
 
+// Read the link below about express behind a proxy
+app.set('trust proxy', true);
+app.set('trust proxy', 'loopback');
+
 
 
 module.exports= app;
