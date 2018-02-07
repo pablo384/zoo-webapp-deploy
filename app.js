@@ -9,6 +9,9 @@ const rendertron = require('rendertron-middleware');
 const user_routes = require('./routes/user');
 const animal_routes = require('./routes/animal');
 
+// Read the link below about express behind a proxy
+app.set('trust proxy', true);
+app.set('trust proxy', 'loopback');
 
 
 //middleware de body-parser
@@ -41,9 +44,7 @@ app.get('*',function(req, res, next){
     res.sendFile(path.resolve('client/index.html'));
 });
 
-// Read the link below about express behind a proxy
-app.set('trust proxy', true);
-app.set('trust proxy', 'loopback');
+
 
 
 
