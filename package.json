@@ -17,6 +17,7 @@
     "jwt-simple": "^0.5.1",
     "moment": "^2.20.1",
     "mongoose": "^4.13.10",
+    "prerender-node": "^2.7.4",
     "rendertron-middleware": "^0.1.2"
   },
   "devDependencies": {

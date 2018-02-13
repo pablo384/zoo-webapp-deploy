@@ -16,10 +16,10 @@ app.set('trust proxy', 'loopback');
 
 //middleware de body-parser
 //render
-app.use(rendertron.makeMiddleware({
-  proxyUrl: 'http://localhost:8080/render',
-}));
-
+// app.use(rendertron.makeMiddleware({
+//   proxyUrl: 'http://localhost:8080/render',
+// }));
+app.use(require('prerender-node').set('prerenderToken', 'fPFU0kWLToBQJSR8ysBX'));
 
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(bodyParse.json());
